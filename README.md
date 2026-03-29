@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# Pear Media AI 🍐
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive AI-powered web application that bridges simple user inputs with advanced AI outputs through two distinct creative workflows.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+### Workflow A — Creative Studio (Text → Image)
+1. **Input**: User types a simple idea
+2. **Enhance**: Gemini 1.5 Flash engineers it into a professional 50-word prompt
+3. **Approve**: User reviews and edits the enhanced prompt in-place
+4. **Generate**: DALL-E 3 produces the final image
 
-### `npm start`
+### Workflow B — Style Lab (Image → Variation)
+1. **Upload**: Drag-and-drop or browse for any image
+2. **Analyze**: Gemini Vision extracts subject, lighting, color palette & artistic style
+3. **Variation**: DALL-E 3 generates a stylistic variation using the analysis
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Layer | Technology |
+|---|---|
+| Frontend | React 18 (CRA), Vanilla CSS |
+| Icons | lucide-react |
+| Text Enhancement | Gemini 1.5 Flash |
+| Image Analysis | Gemini 1.5 Flash (Vision) |
+| Image Generation | OpenAI DALL-E 3 |
 
-### `npm test`
+## 📁 Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+src/
+├── App.jsx                  # Root component with tab switching
+├── App.css                  # Full design system & animations
+├── components/
+│   ├── Navbar.jsx           # Navigation with logo and tabs
+│   ├── WorkflowText.jsx     # Creative Studio (Text workflow)
+│   ├── WorkflowImage.jsx    # Style Lab (Image workflow)
+│   └── ImageCard.jsx        # Reusable image result card
+└── utils/
+    ├── apiHelpers.js        # All API calls (Gemini + OpenAI)
+    └── constants.js         # System prompts and config
+```
 
-### `npm run build`
+## ⚙️ How to Run Locally
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. Clone the repo
+```bash
+git clone https://github.com/your-username/pearmedia-ai-prototype.git
+cd pearmedia-ai-prototype
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Install dependencies
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. Configure API keys
+Create a `.env` file in the project root:
+```env
+REACT_APP_GEMINI_KEY=your_gemini_key_here
+REACT_APP_OPENAI_KEY=your_openai_key_here
+```
+- **Gemini key**: https://aistudio.google.com/ (free tier available)
+- **OpenAI key**: https://platform.openai.com/ (needed for DALL-E 3)
 
-### `npm run eject`
+### 4. Start the dev server
+```bash
+npm start
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🔐 Security Notes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Never commit your `.env` file — it's already in `.gitignore`
+- Always prefix React env vars with `REACT_APP_`
+- For production, add keys in your hosting dashboard (Vercel/Netlify)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🎨 Design
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Dark mode with indigo/violet gradient accent system
+- Glassmorphism cards with blur effects
+- Smooth step-by-step workflow indicators
+- Responsive layout (mobile-first)
+- Drag-and-drop image uploads
 
-## Learn More
+## 📦 Deployment (Vercel)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Push to GitHub
+2. Import repo at [vercel.com](https://vercel.com)
+3. Add `REACT_APP_GEMINI_KEY` and `REACT_APP_OPENAI_KEY` in Environment Variables
+4. Deploy!
