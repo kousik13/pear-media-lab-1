@@ -1,8 +1,11 @@
-# Pear Media AI 🍐
+# Pear Media AI 
 
 A responsive AI-powered web application that bridges simple user inputs with advanced AI outputs through two distinct creative workflows.
 
 ## 🚀 Features
+
+
+
 
 ### Workflow A — Creative Studio (Text → Image)
 1. **Input**: User types a simple idea
@@ -45,8 +48,8 @@ src/
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/your-username/pearmedia-ai-prototype.git
-cd pearmedia-ai-prototype
+git clone https://github.com/kousik13/pear-media-lab-1.git
+cd pear-media-lab
 ```
 
 ### 2. Install dependencies
@@ -57,10 +60,8 @@ npm install
 ### 3. Configure API keys
 Create a `.env` file in the project root:
 ```env
-REACT_APP_GEMINI_KEY=your_gemini_key_here
 REACT_APP_OPENAI_KEY=your_openai_key_here
 ```
-- **Gemini key**: https://aistudio.google.com/ (free tier available)
 - **OpenAI key**: https://platform.openai.com/ (needed for DALL-E 3)
 
 ### 4. Start the dev server
@@ -69,11 +70,6 @@ npm start
 ```
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 🔐 Security Notes
-
-- Never commit your `.env` file — it's already in `.gitignore`
-- Always prefix React env vars with `REACT_APP_`
-- For production, add keys in your hosting dashboard (Vercel/Netlify)
 
 ## 🎨 Design
 
@@ -84,8 +80,22 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - Drag-and-drop image uploads
 
 ## 📦 Deployment (Vercel)
+website link :- https://pear-media-lab-1.vercel.app/
 
-1. Push to GitHub
-2. Import repo at [vercel.com](https://vercel.com)
-3. Add `REACT_APP_GEMINI_KEY` and `REACT_APP_OPENAI_KEY` in Environment Variables
-4. Deploy!
+## 🎨 Screen Shots
+
+1. <img width="1440" height="770" alt="Screenshot 2026-03-29 at 2 22 00 PM" src="https://github.com/user-attachments/assets/df70f7e5-e929-455c-9f49-31fc99494553" />
+
+2. <img width="1440" height="774" alt="Screenshot 2026-03-29 at 2 22 13 PM" src="https://github.com/user-attachments/assets/570cd189-62ad-448c-b995-324459286ca3" />
+
+3. <img width="1439" height="771" alt="Screenshot 2026-03-29 at 2 22 48 PM" src="https://github.com/user-attachments/assets/3eb4bdf2-23e3-40a3-93e5-39f272cb0d1a" />
+
+4. <img width="1437" height="770" alt="Screenshot 2026-03-29 at 2 23 04 PM" src="https://github.com/user-attachments/assets/970d48aa-4d88-4999-86bb-ab6f8af48773" />
+
+5. <img width="1440" height="775" alt="Screenshot 2026-03-29 at 2 23 45 PM" src="https://github.com/user-attachments/assets/bb40e103-3f0f-4218-a42b-d507be46d2eb" />
+
+6<img width="1440" height="772" alt="Screenshot 2026-03-29 at 2 24 08 PM" src="https://github.com/user-attachments/assets/1f559f6e-5f2b-425f-812b-b8cea7575914" />
+
+
+7. <img width="1440" height="772" alt="Screenshot 2026-03-29 at 2 24 36 PM" src="https://github.com/user-attachments/assets/0f463ab8-6eec-404b-b594-558857e5ae05" />
+
